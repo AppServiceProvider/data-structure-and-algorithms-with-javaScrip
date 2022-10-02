@@ -6,17 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Structure & Algorithms with javaScrip</title>
     <script>
-        // Three array merge 
-        let merge3 = (first, second) => {
+        // Two array merge with variable
+        let first = [1,2,3]
+        let second = [4,5,6]
+        let merge4 = (first, second) => {
             for (let i = 0; i < second.length; i++) {
                 first.push(second[i])
                 // return first
             }
             return first
         }
-        let resultMerge3 =merge3(merge3([1, 2, 3], [4, 5, 6]),[7,8,9])
-        console.log(resultMerge3); //1 2 3 4 5 6 7 8 9
-        // Three array merge END
+        let resultMerge4 =merge4(first, second)
+        console.log(resultMerge4); //1 2 3 4 5 6
+        console.log(first); // 1 2 3 4 5 6
+        console.log(second); // 4 5 6
+        // Two array merge END
     </script>
 </head>
 <body>
