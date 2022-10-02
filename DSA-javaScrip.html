@@ -5,6 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Structure & Algorithms with javaScrip</title>
+    <script>
+        // two array merge 
+        let merge2 = (first, second) => {
+            for (let i = 0; i < second.length; i++) {
+                first.push(second[i])
+                // return first
+            }
+            return first
+        }
+        let resultMerge2 =merge2([1, 2, 3], [4, 5, 6])
+        console.log(resultMerge2); //1 2 3 4 5 6
+        // two array merge END
+    </script>
 </head>
 <body>
     
