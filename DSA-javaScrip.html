@@ -6,12 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Structure & Algorithms with javaScrip</title>
     <script>
-        //ES6 Spread Operator two array merge
-        let abc = [1,2,3]
-        let def = [4,5,6]
-        const resultMerge5=[...abc, ...def];
-        console.log(resultMerge5); // 1 2 3 4 5 6
-        //ES6 Spread Operator two array merge
+        // Spread Operator string and integer/number
+        let lmn= [7,8,9]
+        let opq='string 1'
+        const resultMerge6= [...lmn,...opq]
+        console.log(resultMerge6); //7, 8, 9, 's', 't', 'r', 'i', 'n', 'g', ' ', '1'
+        // Spread Operator string and integer/number END
+
+        //concate
+        let ghi= [7,8,9]
+        let jkl=[10,11,12]
+        const resultMerge7=ghi.concat(jkl)
+        console.log(resultMerge7); // 7 8 9 10 11 12
+        console.log(ghi) //7 8 9
+        console.log(jkl) //10 11 12
+        //concate END
+        
+        //concate string and integer/number
+        let r= [7,8,9]
+        let s='string 1'
+        const resultMerge8=[].concat(r,s)
+        const resultMerge9=r.concat(s)
+        console.log(resultMerge8); // 7, 8, 9, 'string 1'
+        console.log(resultMerge9); // 7, 8, 9, 'string 1'
+        //concate string and integer/number END
+
+        // Push Array 1
+        const vegetables = ['parsnip', 'potato'];
+        const moreVegs = ['celery', 'beetroot'];
+        const result12= vegetables.push(...moreVegs); //4
+        console.log(result12); //4      Spread Operator
+        console.log(vegetables); // ['parsnip', 'potato', 'celery', 'beetroot']     Spread Operator
+
+        const result11= vegetables.push(moreVegs); // 5
+        console.log(result11) //5
+        console.log(vegetables); //['parsnip', 'potato', 'celery', 'beetroot', Array(2)['celery', 'beetroot']]
+        // Push Array 1 END
+
+        // Push Array 2
+        let h= [1,2,3]
+        let o= [1,2,3]
+        let result13=h.push(o)
+        console.log(result13); //4
+        console.log(h); // [1, 2, 3, Array(3)]
+        console.log(o); // [1, 2, 3, Array(3)]
+        // Push Array 2 END
+
     </script>
 </head>
 <body>
