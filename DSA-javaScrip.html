@@ -1,80 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>javaScrip Function Re-cursion</title>
     <script>
-      //infinite loop function call bouble out of function and inside function Re-cursion 
-      function myfunction() {
-        // console.log("infinite loop");
-        // myfunction() // call
-      }
-      myfunction() // call
-      // infinite loop function
-
-      // function loop 1
-      function myfunk(x) {
-        // console.log(x); // 0 1 2 3 4 5
-        if (x < 5) {
-          //   myfunk(x) // infinite loop 0 zero
-            // myfunk((x += 1)); // 0 1 2 3 4 5
-          //   myfunk(x++);  // infinite loop 0 zero
+        //infinite loop function call bouble out of function and inside function Re-cursion
+        function myfunction() {
+            // console.log("infinite loop");
+            // myfunction() // call
         }
-      }
-      myfunk(0);
-      // function loop 1 END
+        myfunction(); // call
+        // infinite loop function
 
-      //factorialize factorial Re-cursion 
-      function factorial(item) {
-        if (item == 0) {
-          return 1;
+        // function loop 1
+        function myfunk(x) {
+            // console.log(x); // 0 1 2 3 4 5
+            if (x < 5) {
+                //   myfunk(x) // infinite loop 0 zero
+                // myfunk((x += 1)); // 0 1 2 3 4 5
+                //   myfunk(x++);  // infinite loop 0 zero
+            }
         }
-        return item * factorial(item - 1);
-        // 4*(4-1)*3(3-1)*2(2-1)*1(1-0)
-        // 4*  3  *3*2   *2*1*0
-      }
-      factorial(4);
+        myfunk(0);
+        // function loop 1 END
+
+        //factorialize factorial Re-cursion
+        function factorial(item) {
+            if (item == 0) {
+                return 1;
+            }
+            return item * factorial(item - 1);
+            // 4*(4-1)*3(3-1)*2(2-1)*1(1-0)
+            // 4*  3  *3*2   *2*1*0
+        }
+        factorial(4);
         // console.log(factorial(4)); // 24
-      //factorialize factorial END
+        //factorialize factorial END
 
-      // loop on array
-      let string = ["batman", "superman", "spiderman"];
-      let i = 0;
-      while (i < string.length) {
-        // console.log(string[i]); // batman superman spiderman
-        string[i];
-        i++;
-        // console.log(string[i]); // superman spiderman undefined
-      }
-
-      for (let index = 0; index < string.length; index++) {
-        // console.log(string[index]); // batman superman spiderman
-        string[index];
-      }
-
-      for (x of string) {
-        // console.log(x); // batman superman spiderman
-      }
-      //   loop on array END
-
-    //   Re-cursion 
-      function apple(x){
-        // console.log(x); // 0 1 2 3 4 5 6 7 8 9 10
-        if(x<10){
-            // x++ 
-            // apple(x) // infinity loop if n++ not call
-            apple(x+1) //1 2 3 4 5 6 7 8 9 10
-            // apple(x+1) //1 2 3 4 5 6 7 8 9 10
+        // loop on array
+        let string = ["batman", "superman", "spiderman"];
+        let i = 0;
+        while (i < string.length) {
+            // console.log(string[i]); // batman superman spiderman
+            string[i];
+            i++;
+            // console.log(string[i]); // superman spiderman undefined
         }
-        console.log(x); // 10 9 8 7 6 5 4 3 2 1
-      }
-      let data = 0;
-      apple(data)
-    //   Recursion END
 
+        for (let index = 0; index < string.length; index++) {
+            // console.log(string[index]); // batman superman spiderman
+            string[index];
+        }
+
+        for (x of string) {
+            // console.log(x); // batman superman spiderman
+        }
+
+        let arr = ["batman", "superman", "spiderman"];
+        let index = 0;
+        do {
+            console.log(arr[index]);
+            index++;
+        } while (index < arr.length);
+        //   loop on array END
+
+        //   Re-cursion
+        function apple(x) {
+            // console.log(x); // 0 1 2 3 4 5 6 7 8 9 10
+            if (x < 10) {
+                // x++
+                // apple(x) // infinity loop if n++ not call
+                apple(x + 1); //1 2 3 4 5 6 7 8 9 10
+                // apple(x+1) //1 2 3 4 5 6 7 8 9 10
+            }
+            // console.log(x); // 10 9 8 7 6 5 4 3 2 1
+        }
+        let data = 0;
+        apple(data);
+        //   Recursion END
     </script>
-  </head>
-  <body></body>
+</head>
+
+<body></body>
+
 </html>
