@@ -127,9 +127,9 @@
         function bb1(x) {
             // console.log(x); // 7 6 5 4 3 2 1 0
             if (x > 0) {
-                bb1(x - 1)
+                bb1(x - 1);
             }
-            console.log(x); // 0 1 2 3 4 5 6 7
+            // console.log(x); // 0 1 2 3 4 5 6 7
             // All the test functions push into the stack during execution contest!!In stack it looks like: -
 
             //     Test(0)
@@ -143,19 +143,42 @@
             // test(1) print(1)
             // and so on….
         }
-        const f2 = 7
-        bb1(f2)
+        const f2 = 7;
+        bb1(f2);
 
         function bb(x) {
-            // console.log(x); // 0 1 2 3 4 5 6 7 
+            // console.log(x); // 0 1 2 3 4 5 6 7
             if (x < 7) {
-                bb(x + 1)
+                bb(x + 1);
             }
         }
-        const f = 0
-        bb(f)
-
+        const f = 0;
+        bb(f);
         // Direct Recursion End
+
+        //Call Stack
+        function aaa() {
+            console.log('aaa');
+        }
+
+        function days() {
+            // let data = 21;
+            // console.log(data);
+            // colors();
+            aaa()
+        }
+
+        function fruits() {
+            // let data = 21;
+            // console.log(data);
+            days();
+        }
+
+        function topFunction() {
+            fruits();
+        }
+        topFunction();
+        //Call Stack END
     </script>
 </head>
 
