@@ -62,7 +62,7 @@
         let arr = ["batman", "superman", "spiderman"];
         let index = 0;
         do {
-            console.log(arr[index]);
+            // console.log(arr[index]);
             index++;
         } while (index < arr.length);
         //   loop on array END
@@ -81,6 +81,81 @@
         let data = 0;
         apple(data);
         //   Recursion END
+
+        //   Indirect Recursion
+        let money = 100;
+        let totalApple = 0;
+
+        function buyApple(x) {
+            // console.log(x);
+            if (x > 0) {
+                // console.log("I have", x, "RS", totalApple);
+                // buyMore(x - 10);
+                buyMore(x); // buy more 100
+            } else {
+                // console.log("I don't have more money" + totalApple);
+            }
+            // buyMore(x);
+            // console.log(x); // buy more 100
+        }
+
+        function buyMore(x) {
+            totalApple++;
+            // buyApple(x - 10); // x = x-10
+            // console.log('buy more ' + x);
+        }
+        buyApple(money);
+
+        function a() {
+            b();
+        }
+
+        function b() {
+            // a()
+        }
+        b();
+        // Indirect Recursion
+
+        // Recursion
+        function aa() {
+            // aa()
+        }
+        aa();
+        // Recursion
+
+        // Direct Recursion
+        function bb1(x) {
+            // console.log(x); // 7 6 5 4 3 2 1 0
+            if (x > 0) {
+                bb1(x - 1)
+            }
+            console.log(x); // 0 1 2 3 4 5 6 7
+            // All the test functions push into the stack during execution contest!!In stack it looks like: -
+
+            //     Test(0)
+            // Test(1)
+            // Test(2)
+            // Test(3)
+            // Test(4)
+            // Test(5)
+            // Then pop comes in the picture
+            // So test(0) print 0
+            // test(1) print(1)
+            // and so on….
+        }
+        const f2 = 7
+        bb1(f2)
+
+        function bb(x) {
+            // console.log(x); // 0 1 2 3 4 5 6 7 
+            if (x < 7) {
+                bb(x + 1)
+            }
+        }
+        const f = 0
+        bb(f)
+
+        // Direct Recursion End
     </script>
 </head>
 
