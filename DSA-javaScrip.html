@@ -1,12 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Structure & Algorithms with javaScrip</title>
+    <title>Stack Data structure in JavaScript | Push and Pop operations</title>
+    <script>
+        let data = [];
+        let currentSize = data.length;
+        let max = 5;
+
+        function push(newVal) {
+            // data[currentSize] = newVal //[empty, 20, 21, 22, 23, 24]
+            // currentSize += 1 //[empty, 20, 21, 22, 23, 24]
+            data[currentSize] = newVal
+            currentSize += 1
+        }
+        push(20)
+        push(21)
+        push(22)
+        push(23)
+        push(24)
+        console.log(data);
+
+        //array push pop with condition
+        let data2 = [];
+        let currentSize2 = data2.length;
+        let max2 = 5;
+
+        function push2(newVal) {
+            if (currentSize2 >= max2) {
+                alert('stack is full ' + newVal)
+
+            }
+            data2[currentSize2] = newVal
+            currentSize2 += 1
+        }
+        // pop
+        function pop() {
+            if (currentSize2 > 0) {
+                currentSize2 -= 1
+                data2.length = currentSize2
+            } else {
+                alert('stack is already empty')
+            }
+        } // pop
+
+        push2(62)
+        push2(92)
+        push2(11)
+        push2(82)
+        push2(6)
+            // push2(55)
+            // push2(43)
+
+
+        pop()
+        pop()
+        pop()
+
+
+
+
+        console.log(data2);
+        //array push pop with condition END
+
+        //string push pop with condition END
+    </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
