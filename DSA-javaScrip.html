@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Structure & Algorithms with javaScrip</title>
+    <title>Data Structure & Algorithms with javaScrip Array</title>
+    <script>
+        let xt = [10, 12, 34, 11, 2, 9]
+        for (let index = 0; index < xt.length - 3; index++) {
+            const element = xt[index];
+            // console.log(element); // 10 12 34
+        }
+        let xt2 = [10, 12, 34, 11, 2, 9]
+        xt2.length = 3
+            // xt2.length = -3 Eroor but what type of data structure array? 
+            // console.log(xt2); // 10 12  34
+
+        let xt3 = [22, 1, 3, 5, 22, 7, 5, 9, 0, 11, 1, 2, 4, 11, 55, 7, 15, 17]
+        let xt4 = new Set(xt3)
+        let xt3Length = xt3.length
+        console.log(xt4); //13 set 
+        console.log([
+            [...xt4]
+        ]); //13 array
+        console.log(xt4.size); //13
+        console.log(xt3Length); //18
+    </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
